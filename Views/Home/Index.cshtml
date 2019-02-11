@@ -1,0 +1,45 @@
+﻿@model User
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script> -->
+    <title>Form Validation</title>
+</head>
+<body>
+    <h1>Enter your information</h1>
+
+    <form asp-action = "Create" asp-controller = "Home" method = "post">
+        <span class="text-danger" asp-validation-for = "FName"></span>
+        <label asp-for = "FName">First Name</label>
+        <input asp-for = "FName">
+        <br>
+        <br>
+        <span class="text-danger" asp-validation-for = "LName"></span>
+        <label asp-for = "LName">Last Name</label>
+        <input asp-for = "LName">
+         <br>
+         <br>
+         <span class="text-danger" asp-validation-for = "Age"></span>
+        <label asp-for = "Age">Age</label>
+        <input asp-for = "Age">
+         <br>
+         <br>
+        <span class="text-danger" asp-validation-for = "Email"></span>
+        <label asp-for = "Email">Email</label>
+        <input asp-for = "Email">
+         <br>
+         <br>
+        <span class="text-danger" asp-validation-for = "Password"></span>
+        <label asp-for = "Password">Password</label>
+        <input asp-for = "Password">
+        <br>
+        <br>
+        <input value = "Submit" type = "submit">
+    </form>
+</body>
+</html>
